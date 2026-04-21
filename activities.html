@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="logo.jpeg">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .tab-btn.active {
+            background: #22c55e;
+            color: white;
+        }
+
+        .sub-tab.active {
+            background: #0ea5e9;
+            color: white;
+        }
+                /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- TITLE -->
+    <section class="relative py-20 px-6 text-center">
+
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+
+            <h6 class="text-green-400 tracking-widest mb-3 fade-in">
+                What We Do
+            </h6>
+
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight fade-in">
+                Programs That Make a Real Difference
+            </h1>
+
+            <p class="mt-6 text-lg opacity-80">
+                From classroom education to community service, our programs are designed to create lasting change
+                through education and care.
+            </p>
+
+        </div><br><br>
+
+    </section>
+
+    <!-- MAIN TABS -->
+    <section class="max-w-6xl mx-auto px-6">
+
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button class="tab-btn active px-6 py-2 rounded-full bg-white/10" data-tab="dental">
+                Dental Care Education
+            </button>
+
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="skin">
+                Skin Care Education
+            </button>
+
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="packaging">
+                Product Packaging
+            </button>
+
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="help">
+                Dental Help
+            </button>
+        </div>
+
+        <!-- ================= DENTAL CARE ================= -->
+        <div class="tab-content" id="dental">
+            <div class="bg-white/10 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold mb-2">Dental Care Education</h3>
+                <p class="opacity-80">Teaching communities the foundations of oral health through lessons and resources.
+                </p>
+            </div><br><br>
+
+
+            <!-- SUB TABS -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+
+                <button class="sub-tab active px-5 py-2 rounded-full bg-white/10" data-sub="brushing">
+                    Brushing & Flossing
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="education">
+                    Oral Health Education
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="nutrition">
+                    Nutrition & Oral Health
+                </button>
+            </div>
+
+            <!-- SUB CONTENT -->
+
+            <div class="sub-content" id="brushing">
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded mb-3">
+                        <h3 class="font-semibold">Brushing & Flossing Techniques</h3>
+                        <p class="text-sm opacity-70">Demonstrations teaching proper brushing and flossing methods for
+                            kids and teenagers, with kits distributed at every session.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="education">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="rounded mb-3">
+                        <h3 class="font-semibold"> Oral Health Education</h3>
+                        <p class="text-sm opacity-70">Fun lessons for children and teenagers on cavity prevention,
+                            healthy snacking for teeth, and building lifelong dental hygiene habits from an early age.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="nutrition">
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322" class="rounded mb-3">
+                        <h3 class="font-semibold">Nutrition & Oral Health</h3>
+                        <p class="text-sm opacity-70">Workshops exploring the link between diet and dental health —
+                            covering sugar awareness, tooth-friendly foods, and how nutrition impacts gum disease.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= SKIN ================= -->
+        <div class="tab-content hidden" id="skin">
+            <div class="bg-white/10 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold mb-2">Skin Care Education</h3>
+                <p class="opacity-80">Empowering individuals with knowledge on skin hygiene, protection, and condition
+                    management.</p>
+            </div><br><br>
+
+            <!-- SUB TABS -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="sub-tab active px-5 py-2 rounded-full bg-white/10" data-sub="routines">
+                    Daily Routines
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="protection">
+                    Sun Protection
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="condition">
+                    Skin Conditions
+                </button>
+            </div>
+
+            <!-- SUB CONTENT -->
+
+            <div class="sub-content" id="routines">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded mb-3">
+                        <h3 class="font-semibold">Daily Skin Care Routines</h3>
+                        <p class="text-sm opacity-70">Guidance on building affordable, effective daily skin care
+                            routines tailored to different skin types, climates, and budgets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="protection">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1580281658629-7b9fbd38a0f1" class="rounded mb-3">
+                        <h3 class="font-semibold">Sun Protection Programs</h3>
+                        <p class="text-sm opacity-70">Education on UV damage prevention, proper sunscreen use, and
+                            recognizing early signs of sun-related skin issues — with free sunscreen distribution
+                            events.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="condition">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71" class="rounded mb-3">
+                        <h3 class="font-semibold">Managing Skin Conditions</h3>
+                        <p class="text-sm opacity-70">Informational sessions on managing acne, fungal infections, and
+                            other common conditions through proper hygiene and affordable treatments.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PACKAGING ================= -->
+        <div class="tab-content hidden" id="packaging">
+            <div class="bg-white/10 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold mb-2">Product Packaging</h3>
+                <p class="opacity-80">Assembling and distributing hygiene care packages to communities and families in
+                    need.
+                </p>
+            </div><br><br>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="sub-tab active px-5 py-2 rounded-full bg-white/10" data-sub="Kit">
+                    Hygiene Kit Assembly
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="distribution">
+                    Community Distribution
+                </button>
+            </div>
+
+            <div class="sub-content" id="Kit">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded mb-3">
+                        <h3 class="font-semibold">Hygiene Kit Assembly</h3>
+                        <p class="text-sm opacity-70">Volunteers assemble hygiene kits containing toothbrushes,
+                            toothpaste, soap, lotion, and skin care essentials for distribution to underserved families.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="distribution">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1580281658629-7b9fbd38a0f1" class="rounded mb-3">
+                        <h3 class="font-semibold">Community Distribution</h3>
+                        <p class="text-sm opacity-70">Organized distribution events at schools, community centers, and
+                            dental camps, ensuring hygiene products reach those who need them most.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= HELP ================= -->
+        <div class="tab-content hidden" id="help">
+            <div class="bg-white/10 p-6 rounded-xl">
+                <h3 class="text-xl font-semibold mb-2">Dental Help</h3>
+                <p class="opacity-80">Dental care services and referrals for individuals who lack access to professional
+                    treatment.
+                </p>
+            </div><br><br>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="sub-tab active px-5 py-2 rounded-full bg-white/10" data-sub="Clinics">
+                    Free Clinics
+                </button>
+
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="Specialist">
+                    Specialist Referrals
+                </button>
+                <button class="sub-tab px-5 py-2 rounded-full bg-white/10" data-sub="Ongoing">
+                    Ongoing Support
+                </button>
+            </div>
+
+            <div class="sub-content" id="Clinics">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded mb-3">
+                        <h3 class="font-semibold">Dental Clinics</h3>
+                        <p class="text-sm opacity-70">Pop-up dental clinics providing free checkups to communities
+                            without access to affordable dental care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="Specialist">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1580281658629-7b9fbd38a0f1" class="rounded mb-3">
+                        <h3 class="font-semibold">Specialist Referral Network</h3>
+                        <p class="text-sm opacity-70">For patients needing advanced care, we connect them with partner
+                            orthodontists, offering reduced-cost services and check ups.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content hidden" id="Ongoing">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-4 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1580281658629-7b9fbd38a0f1" class="rounded mb-3">
+                        <h3 class="font-semibold">Ongoing Support</h3>
+                        <p class="text-sm opacity-70">Follow-ups ensuring families maintain their oral health after
+                            treatment, including check-in calls and home care guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- JS -->
+
+    <script>
+        // MAIN TABS
+        const tabs = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                contents.forEach(c => c.classList.add('hidden'));
+                document.getElementById(tab.dataset.tab).classList.remove('hidden');
+            });
+        });
+
+        // SUB TABS
+        const subTabs = document.querySelectorAll('.sub-tab');
+        const subContents = document.querySelectorAll('.sub-content');
+
+        subTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                subTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                subContents.forEach(c => c.classList.add('hidden'));
+                document.getElementById(tab.dataset.sub).classList.remove('hidden');
+            });
+        });
+
+    </script>
+<script>
+  // Load header
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Attach menu toggle AFTER loading
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+
+      // Load icons AFTER header loads
+      lucide.createIcons();
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+      lucide.createIcons();
+    });
+</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.jpeg">
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active-tab {
+      background: #22c55e !important;
+      color: white;
+    }
+
+    .donation-card.active {
+      border: 2px solid #22c55e;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+
+  <div id="header"></div>
+
+  <!-- HERO -->
+  <section class="relative py-20 text-center">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl font-bold">Make a Difference Today</h1>
+      <p class="mt-4 opacity-80">
+        Whether you give your time or your support, every contribution helps us bring dental and skin care to
+        communities in need.
+      </p>
+    </div>
+  </section>
+
+  <!-- TAB BUTTONS -->
+  <div class="flex justify-center gap-4 my-10">
+    <button class="tab-btn active-tab px-6 py-2 rounded-full bg-white/10" data-tab="volunteer">
+      Volunteer
+    </button>
+
+    <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="donate">
+      Donate
+    </button>
+  </div>
+
+  <!-- VOLUNTEER -->
+  <div class="tab-content" id="volunteer">
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div
+        class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg hover:scale-[1.02] transition">
+
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 mb-4 text-xl">
+          👥
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2">Community Dental Camps</h3>
+
+        <p class="text-sm opacity-80 mb-4">
+          Assist dental professionals during dental camps by talking to families and finding ways to help them.
+        </p>
+
+        <p class="text-sm"><span class="font-semibold">Time:</span> Flexible</p>
+        <p class="text-sm"><span class="font-semibold">Location:</span> Community Centers</p>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg hover:scale-[1.02] transition">
+
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 mb-4 text-xl">
+          📅
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2">School Outreach Programs</h3>
+
+        <p class="text-sm opacity-80 mb-4">
+          Help teach children about proper dental and skin hygiene practices in schools.
+        </p>
+
+        <p class="text-sm"><span class="font-semibold">Time:</span> Weekdays</p>
+        <p class="text-sm"><span class="font-semibold">Location:</span> Schools</p>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg hover:scale-[1.02] transition">
+
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 mb-4 text-xl">
+          📍
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2">Product Packaging & Distribution</h3>
+
+        <p class="text-sm opacity-80 mb-4">
+          Pack and distribute hygiene kits to underserved families and communities.
+        </p>
+
+        <p class="text-sm"><span class="font-semibold">Time:</span> Weekends</p>
+        <p class="text-sm"><span class="font-semibold">Location:</span> Warehouse</p>
+
+      </div>
+
+    </div>
+
+    <div class="text-center mt-10">
+      <button class="px-8 py-3 bg-green-500 rounded-full">
+        Sign Up to Volunteer
+      </button><br>
+
+      <p class="text-sm opacity-80">We'll reach out with upcoming opportunities that match your interests.</p>
+    </div>
+
+  </div>
+
+  <!-- DONATE -->
+  <div class="tab-content hidden" id="donate">
+
+    <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6 px-6">
+
+      <div class="donation-card bg-white/10 p-6 text-center rounded-xl cursor-pointer" data-amount="10">
+        <h2 class="text-2xl font-bold">$10</h2>
+        <p>Supporter</p>
+      </div>
+
+      <div class="donation-card active bg-white/20 p-6 text-center rounded-xl cursor-pointer" data-amount="25">
+        <h2 class="text-2xl font-bold">$25</h2>
+        <p>Advocate</p>
+      </div>
+
+      <div class="donation-card bg-white/10 p-6 text-center rounded-xl cursor-pointer" data-amount="50">
+        <h2 class="text-2xl font-bold">$50</h2>
+        <p>Champion</p>
+      </div>
+
+      <div class="donation-card bg-white/10 p-6 text-center rounded-xl cursor-pointer" data-amount="100">
+        <h2 class="text-2xl font-bold">$100</h2>
+        <p>Hero</p>
+      </div>
+
+    </div>
+
+    <!-- DONATE BUTTON -->
+    <div class="text-center mt-10">
+      <button id="donateButton" class="px-8 py-3 bg-green-500 rounded-full">
+        Donate $25
+      </button><br>
+      <p class="text-sm opacity-80">All donations are very appreciated. You'll receive a receipt via email.</p>
+    </div>
+
+  </div>
+
+  <div id="footer"></div>
+
+  <!-- ================= JS ================= -->
+<script>
+  // Load header
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Attach menu toggle AFTER loading
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+
+      // Load icons AFTER header loads
+      lucide.createIcons();
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+      lucide.createIcons();
+    });
+</script>
+  <script>
+    // ================= TAB SYSTEM =================
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(btn => {
+      btn.addEventListener("click", () => {
+
+        tabs.forEach(b => b.classList.remove("active-tab"));
+        btn.classList.add("active-tab");
+
+        contents.forEach(c => c.classList.add("hidden"));
+        document.getElementById(btn.dataset.tab).classList.remove("hidden");
+      });
+    });
+
+    // ================= DONATION SYSTEM =================
+    const cards = document.querySelectorAll(".donation-card");
+    const donateButton = document.getElementById("donateButton");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+
+        cards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+
+        const amount = card.dataset.amount;
+        donateButton.textContent = "Donate $" + amount;
+      });
+    });
+
+    // ================= HEADER / FOOTER =================
+    <!--fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        lucide.createIcons();
+      });-->
+
+  </script>
+
+</body>
+
+</html>
