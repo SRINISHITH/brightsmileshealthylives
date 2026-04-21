@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="logo.jpeg">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .tab-btn.active {
+            background: #22c55e;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- PAGE TITLE -->
+    <!-- ABOUT HERO -->
+    <section class="relative py-20 px-6 text-center">
+
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+
+            <h6 class="text-green-400 tracking-widest mb-3 fade-in">
+                ABOUT US
+            </h6>
+
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight fade-in">
+                Building Healthier Communities,
+                <span class="text-green-400 italic">
+                    One Smile at a Time.
+                </span>
+            </h1>
+
+            <p class="mt-6 text-lg opacity-80">
+                Bright Smiles Healthy Lives is dedicated to bridging the hygiene gap in underserved areas through dental
+                and skin care education, product distribution, and outreach programs.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- TABS -->
+    <section class="max-w-6xl mx-auto px-6">
+
+        <!-- Tab Buttons -->
+        <div class="flex flex-wrap gap-4 justify-center mb-10">
+            <button class="tab-btn active px-6 py-2 rounded-full bg-white/10" data-tab="mission">Our Mission</button>
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="passion">Our Passion</button>
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="board">Board</button>
+            <button class="tab-btn px-6 py-2 rounded-full bg-white/10" data-tab="team">Team</button>
+        </div>
+
+        <!-- TAB CONTENT -->
+
+        <!-- MISSION -->
+        <div class="tab-content" id="mission">
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="bg-white/10 p-8 rounded-xl border border-white/20">
+                    <div class="mb-4"><i data-lucide="heart"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Compassionate Care</h3>
+                    <p>We believe everyone deserves access to basic hygiene education and care.</p>
+                </div>
+
+                <div class="bg-white/10 p-8 rounded-xl border border-white/20">
+                    <div class="mb-4"><i data-lucide="shield"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Preventive Focus</h3>
+                    <p>We promote early hygiene habits to prevent long-term health issues.</p>
+                </div>
+
+                <div class="bg-white/10 p-8 rounded-xl border border-white/20">
+                    <div class="mb-4"><i data-lucide="users"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Community Driven</h3>
+                    <p>Our programs are built with communities and powered by volunteers.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PASSION -->
+        <div class="tab-content hidden" id="passion">
+
+            <div class="grid md:grid-cols-3 gap-8 mt-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/10 hover:shadow-lg transition">
+
+                    <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-5">
+                        <i data-lucide="flame" class="w-6 h-6 text-green-400"></i>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Driven by Purpose</h3>
+
+                    <p class="opacity-80 leading-relaxed">
+                        Our passion stems from witnessing the transformative power of proper hygiene education and
+                        care across communities.
+                    </p>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/10 hover:shadow-lg transition">
+
+                    <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-5">
+                        <i data-lucide="heart" class="w-6 h-6 text-green-400"></i>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Every Smile Matters</h3>
+
+                    <p class="opacity-80 leading-relaxed">
+                        We ensure every child and adult has access to knowledge and tools for healthy teeth and skin.
+                    </p>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/10 hover:shadow-lg transition">
+
+                    <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-5">
+                        <i data-lucide="award" class="w-6 h-6 text-green-400"></i>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Excellence in Service</h3>
+
+                    <p class="opacity-80 leading-relaxed">
+                        We strive for excellence in every outreach program, delivering meaningful and lasting impact.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOARD -->
+        <div class="tab-content hidden" id="board">
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="bg-white/10 p-6 rounded-xl text-center">
+                    <img src="Founder.jpg" class="rounded-full mx-auto mb-3 w-24">
+                    <h4 class="font-semibold">Chakrika Boppana</h4>
+                    <p class="text-sm opacity-70">Founder</p>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-xl text-center">
+                    <img src="Co-Founder.jpg" class="rounded-full mx-auto mb-3 w-24">
+                    <h4 class="font-semibold">Anoki Raikar</h4>
+                    <p class="text-sm opacity-70">Co-Founder</p>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-xl text-center">
+                    <img src="Treasurer.jpg" class="rounded-full mx-auto mb-3 w-24">
+                    <h4 class="font-semibold">Hamsika Boppana</h4>
+                    <p class="text-sm opacity-70">Treasurer</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM -->
+        <div class="tab-content hidden" id="team">
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white/10 p-4 rounded-xl text-center">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-full mx-auto mb-2 w-20">
+                    <p class="font-semibold">Volunteer A</p>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-xl text-center">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-full mx-auto mb-2 w-20">
+                    <p class="font-semibold">Volunteer B</p>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-xl text-center">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" class="rounded-full mx-auto mb-2 w-20">
+                    <p class="font-semibold">Volunteer C</p>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-xl text-center">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-full mx-auto mb-2 w-20">
+                    <p class="font-semibold">Volunteer D</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- JS -->
+
+<script>
+  // Load header
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Attach menu toggle AFTER loading
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+
+      // Load icons AFTER header loads
+      lucide.createIcons();
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+      lucide.createIcons();
+    });
+</script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

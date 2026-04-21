@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.jpeg">
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .filter-btn.active {
+      background: #22c55e;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <!-- HERO -->
+  <section class="relative py-20 px-6 text-center">
+
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold">
+        Our Work in Action
+      </h1>
+
+      <p class="mt-4 text-lg opacity-80">
+        See the impact of our programs through moments captured across the communities we serve.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- FILTERS -->
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <button class="filter-btn active px-5 py-2 rounded-full bg-white/10" data-filter="all">All</button>
+      <button class="filter-btn px-5 py-2 rounded-full bg-white/10" data-filter="dental">Dental Care</button>
+      <button class="filter-btn px-5 py-2 rounded-full bg-white/10" data-filter="skin">Skin Care</button>
+      <button class="filter-btn px-5 py-2 rounded-full bg-white/10" data-filter="packaging">Product Packaging</button>
+      <button class="filter-btn px-5 py-2 rounded-full bg-white/10" data-filter="outreach">Outreach</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- CARD -->
+      <div class="gallery-item dental bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">Dental Care Products</h4>
+          <p class="text-sm opacity-70">Providing essential oral hygiene kits.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item skin bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">Skin Care Awareness</h4>
+          <p class="text-sm opacity-70">Promoting hygiene practices.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item packaging bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1585386959984-a41552231658" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">Kit Packaging</h4>
+          <p class="text-sm opacity-70">Preparing hygiene kits.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item outreach bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">School Outreach</h4>
+          <p class="text-sm opacity-70">Educating communities.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item dental bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">Dental Camps</h4>
+          <p class="text-sm opacity-70">Free dental checkups.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item outreach bg-white/10 rounded-xl overflow-hidden backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">Community Programs</h4>
+          <p class="text-sm opacity-70">Serving underserved communities.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+
+  <script>
+    // FILTER LOGIC
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.gallery-item');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        items.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // LOAD HEADER + FOOTER
+   <!-- fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        lucide.createIcons();
+      }); -->
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+<script>
+  // Load header
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Attach menu toggle AFTER loading
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+
+      // Load icons AFTER header loads
+      lucide.createIcons();
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+      lucide.createIcons();
+    });
+</script>
+
+</body>
+
+</html>
